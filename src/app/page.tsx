@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import questionIcon from "@/assets/question.svg";
 
 import config from "@/config/app";
+import { usePrueba } from "@/api/graphql/resolvers/prueba";
+import { useEffect } from "react";
 
 interface ILogin {
   email: string;
@@ -23,6 +25,7 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
   const router = useRouter();
+  const query = usePrueba();
   const formik = useFormik<ILogin>({
     initialValues: { email: "", password: "" },
     validationSchema: LoginSchema,
@@ -31,6 +34,12 @@ const Login = () => {
       router.push("/session/home", { scroll: false });
     },
   });
+
+  useEffect(() => {
+    if (!query.loading && query.data) {
+      console.info(query.data);
+    }
+  }, [query.loading, query.data]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gray-100">
