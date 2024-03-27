@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="./logo.png" alt="Project Logo or Image" width="120" height="100" style="margin-bottom: -30px">
 
-## Getting Started
+# Reto - Frontend NextTs/GraphQL
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Fecha inicio: 01/04/2024
+Fecha fin: 03/04/2024
+Fecha respuesta: 05/04/2024
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Conocimientos Requeridos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [x] NextJS
+- [x] Typescript
+- [x] Tailwindcss
+- [x] GraphQL
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Descripción:
 
-## Learn More
+Los usuarios cliente podrán ingresar a su portal y cargar productos que se vincularán a sus cuentas. Luego, podrán listar y/o buscar productos donde podrán visualizar el detalle de cada producto.
 
-To learn more about Next.js, take a look at the following resources:
+Este proyecto está conectado a 2 bases de datos **eiAccounts** y **eiInventories**. La lista de productos está relacionada a la cuenta con la que se asoció al momento de la carga inicial.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El usuario de prueba es prueba@gamil.com (no hay contraseña, el login usará solo un filtro en un listado)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Tareas:
 
-## Deploy on Vercel
+##### A. Cuenta:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Login: Agregar una query para buscar la cuenta por email usando el listado de las cuentas enviando parámetros disponibles en el **schema**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### B. Productos:
+
+- [ ] Agregar una mutación para agregar un array de productos (debe asociarse a una cuenta cliente - ID de cuenta obtenido desde el Login)
+- [ ] Agregar una query para listar los productos enviando parámetros de **paginación** y filtrado de búsqueda (nombre/sku)
+
+> Opcional: Se considerará el uso de validaciones en queries y mutaciones (uso de yup con formik) y creaciones de carpetas utils o helpers
+
+#### Mejoras:
+
+```
+Según criterio del desarrollador
+```
+
+- [ ] Mejorar eslint
+- [ ] Agregar prettier
+- [ ] Añadir test unitarios
