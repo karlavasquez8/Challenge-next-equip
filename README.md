@@ -21,7 +21,8 @@ Los usuarios cliente podrán ingresar a su portal y cargar productos que se vinc
 
 Este proyecto está conectado a 2 bases de datos **eiAccounts** y **eiInventories**. La lista de productos está relacionada a la cuenta con la que se asoció al momento de la carga inicial.
 
-El usuario de prueba es prueba@gamil.com (no hay contraseña, el login usará solo un filtro en un listado)
+- El usuario de prueba es prueba@gamil.com (no hay contraseña, el login usará solo un filtro en un listado)
+- La api es http://ec2-54-152-38-34.compute-1.amazonaws.com
 
 #### Tareas:
 
