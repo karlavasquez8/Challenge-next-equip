@@ -36,7 +36,7 @@ const HomeWrapper = () => {
 const Home: FC<HomeProps> = ({ account }) => {
   const [createProduct] = useMutation(mutationCreateProducts)
 
-  const { data, error } = useFilterProducts(account!._id as string, 1)
+  const { data } = useFilterProducts(account!._id as string, 1)
 
   const onSubmit = ({ sku, name }: FormProducts) => {
     createProduct({

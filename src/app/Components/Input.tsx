@@ -1,15 +1,17 @@
-import React, { ChangeEvent, FocusEvent } from "react";
-import { FieldMetaProps } from "formik";
+import React, { ChangeEvent, FocusEvent } from 'react'
+import { FieldMetaProps } from 'formik'
 
 interface InputProps {
-  label: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  onBlur: (event: FocusEvent<HTMLInputElement>) => void;
-  name: string;
-  type?: string;
-  layout?: "col" | "gap";
-  meta?: FieldMetaProps<string>;
+  label: string
+  value: string
+  // eslint-disable-next-line no-unused-vars
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  // eslint-disable-next-line no-unused-vars
+  onBlur: (event: FocusEvent<HTMLInputElement>) => void
+  name: string
+  type?: string
+  layout?: 'col' | 'gap'
+  meta?: FieldMetaProps<string>
 }
 
 const Input: React.FC<InputProps> = ({
@@ -23,7 +25,7 @@ const Input: React.FC<InputProps> = ({
   meta,
 }) => {
   return (
-    <div className={`flex ${layout === "col" ? "flex-col" : ""} gap-[6px]`}>
+    <div className={`flex ${layout === 'col' ? 'flex-col' : ''} gap-[6px]`}>
       <span>{label}</span>
       <input
         type={type}
@@ -37,7 +39,7 @@ const Input: React.FC<InputProps> = ({
         <span className="text-red-500 text-[12px]">{meta.error}</span>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

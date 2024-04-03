@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv'
 
-dotenv.config();
+dotenv.config()
 
 const config = {
   apiUrl: process.env.API_URL,
-};
+}
 
-export default config;
+export default config

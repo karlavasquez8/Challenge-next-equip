@@ -1,14 +1,14 @@
-import { Account } from "@/interfaces/account";
-import { ReactNode } from "react";
+import { Account } from '@/interfaces/account'
+import { ReactNode } from 'react'
 
 export interface AppState {
-  account?: Account;
+  account?: Account
 }
 export interface Action {
-  type: "ADD_ACCOUNT";
-  payload: Account;
+  type: 'ADD_ACCOUNT'
+  payload: Account
 }
 
 export type GlobalProviderProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}

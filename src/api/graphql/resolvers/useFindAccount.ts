@@ -1,8 +1,8 @@
-import {useLazyQuery, useQuery} from "@apollo/client";
-import {queryFindAccount} from "@/api/graphql/queries/findAccount";
+import { useLazyQuery } from '@apollo/client'
+import { queryFindAccount } from '@/api/graphql/queries/findAccount'
 
 export const useFindAccount = () => {
-    return useLazyQuery(queryFindAccount,{
-        context: { clientName: "api" }
-    });
-};
+  return useLazyQuery(queryFindAccount, {
+    context: { clientName: 'api' },
+  })
+}

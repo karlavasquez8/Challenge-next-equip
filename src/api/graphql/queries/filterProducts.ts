@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 export const queryFilterProducts = gql`
   query Products($accountId: String, $page: Int) {
@@ -8,4 +8,4 @@ export const queryFilterProducts = gql`
       _id
     }
   }
-`;
+`

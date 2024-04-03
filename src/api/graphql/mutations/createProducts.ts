@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 export const mutationCreateProducts = gql`
   mutation createProducts($name: String!, $sku: String, $id: ID!) {
@@ -15,4 +15,4 @@ export const mutationCreateProducts = gql`
       }
     }
   }
-`;
+`

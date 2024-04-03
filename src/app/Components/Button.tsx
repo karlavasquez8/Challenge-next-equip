@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react'
 
 type ButtonProps = PropsWithChildren<{
-  type?: "submit" | "button";
-}>;
+  type?: 'submit' | 'button'
+}>
 
-const Button = ({ children, type = "submit" }: ButtonProps) => {
+const Button = ({ children, type = 'submit' }: ButtonProps) => {
   return (
     <button
       type={type}
@@ -12,7 +12,7 @@ const Button = ({ children, type = "submit" }: ButtonProps) => {
     >
       {children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
